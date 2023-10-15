@@ -1,0 +1,19 @@
+admissionWebhookRuntimeVersion: v0.1.0
+codeGeneratorVersion: v0.28.1
+controllerRuntimeVersion: v0.16.0
+controllerToolsVersion: v0.13.0
+envtestKubernetesVersion: 1.27.1
+goModule: github.com/sap/secret-generator-cop
+goVersion: "1.21"
+groupName: operator.kyma-project.io
+groupVersion: v1alpha1
+image: secret-generator-cop:latest
+kind: SecretGenerator
+kubernetesVersion: v0.28.1
+mutatingWebhookEnabled: false
+operatorName: secret-generator-cop.cs.sap.com
+owner: SAP SE or an SAP affiliate company and secret-generator-cop contributors
+resource: secretgenerators
+spdxLicenseHeaders: true
+validatingWebhookEnabled: false
+version: v0.1.9

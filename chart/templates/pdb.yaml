@@ -1,0 +1,13 @@
+{{- if ge (int .Values.replicaCount) 2 }}
+apiVersion: policy/v1
+kind: PodDisruptionBudget
+metadata:
+  name: {{ include "secret-generator-cop.fullname" . }}
+  labels:
+    {{- include "secret-generator-cop.labels" . | nindent 4 }}
+spec:
+  minAvailable: 1
+  selector:
+    matchLabels:
+      {{- include "secret-generator-cop.selectorLabels" . | nindent 6 }}
+{{- end }}
